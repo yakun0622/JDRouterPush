@@ -46,7 +46,7 @@ def bark(title, content):
         print("bark服务的bark_token未设置!!")
         return
     res = requests.get(
-        f"""http://123.206.228.114:8080/{GlobalVariable.BARK}/{title}/{content}""")
+        f"""https://api.day.app/{GlobalVariable.BARK}/{title}/{content}""")
     if res.status_code == 200:
         print("bark推送成功!")
     else:
